@@ -35,8 +35,8 @@ Snake Game là một trò chơi đơn giản được viết bằng ngôn ngữ 
 #### 2. Clone source code
 
 ```bash
-git clone https://github.com/your-username/snake-game.git
-cd snake-game
+git clone https://github.com/Healer-H/SnakeGame.git
+cd SnakeGame 
 ```
 
 #### 3. Biên dịch và chạy trò chơi
@@ -69,8 +69,8 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
    Clone repository của game về máy của bạn:
 
    ```sh
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Healer-H/SnakeGame.git
+   cd SnakeGame
 
 3. **Build Docker Image**
 
@@ -78,12 +78,11 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
   docker build -t snake_game .
   ```
 
-4. **Run Docker Container **
+4. **Run Docker Container**
 
   ```bash
   docker run -it --rm snake_game
   ```
-
 
 ## Hướng dẫn chơi game
 
