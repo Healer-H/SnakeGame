@@ -76,3 +76,11 @@ void Game::update() {
         std::cout << "Collision detected, game over" << std::endl;
     }
 }
+void Game::render() {
+    std::cout << "Rendering game" << std::endl;
+    window.clear();
+    ui.displayScore(window, score);
+    snake.draw(window);
+    food.draw(window);
+    window.display();
+}
