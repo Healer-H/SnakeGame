@@ -13,7 +13,7 @@ public:
     bool checkCollision();         // Kiểm tra va chạm với chính thân mình hoặc biên
 
 private:
-    std::deque<sf::Vector2f> body;  // Vị trí của các đoạn thân rắn
+    std::vector<sf::RectangleShape> body;  // Vị trí của các đoạn thân rắn
     sf::Vector2f direction;         // Hướng di chuyển
 };
 
