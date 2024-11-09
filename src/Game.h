@@ -16,6 +16,7 @@ private:
     Snake snake;
     Food food;
     UI ui;
+
     int score;
 
     void processInput();  // Xử lý đầu vào của người chơi
