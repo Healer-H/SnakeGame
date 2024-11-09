@@ -19,3 +19,11 @@ void Snake::move(const sf::Vector2u& windowSize) {
     }
     body[0].setPosition(headPos);
 }
+
+void Snake::grow() {
+    // Add a new segment to the snake's body at the position of the last segment
+    sf::RectangleShape newSegment(sf::Vector2f(10, 10));
+    newSegment.setFillColor(sf::Color::Green);
+    newSegment.setPosition(body.back().getPosition());
+    body.push_back(newSegment);
+}
