@@ -27,3 +27,13 @@ void Snake::grow() {
     newSegment.setPosition(body.back().getPosition());
     body.push_back(newSegment);
 }
+
+bool Snake::checkCollision(const sf::Vector2u& windowSize) const {
+    // Check collision with the snake's body
+    for (int i = 1; i < body.size(); ++i) {
+        if (body[0].getPosition() == body[i].getPosition()) {
+            return true;
+        }
+    }
+    return false;
+}
