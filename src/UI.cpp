@@ -6,3 +6,8 @@ void UI::displayScore(sf::RenderWindow &window, int score) {
     scoreText.setString("Score: " + std::to_string(score));
     window.draw(scoreText);
 }
+
+void UI::displayGameOver(sf::RenderWindow &window) {
+    // Hiển thị thông báo "Game Over"
+    window.draw(gameOverText);
+}
