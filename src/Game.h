@@ -17,11 +17,23 @@ private:
     Food food;
     UI ui;
 
+    // Các trạng thái của trò chơi
+    enum class GameState { StartScreen, Playing, EndScreen };
+    GameState currentState;
+
     int score;
+
+    // Nút giao diện
+    sf::RectangleShape startButton;  // Nút "Start"
+    sf::RectangleShape replayButton; // Nút "Replay"
 
     void processInput();  // Xử lý đầu vào của người chơi
     void update();        // Cập nhật trạng thái trò chơi
     void render();        // Vẽ các thành phần lên cửa sổ
+
+    // Các hàm vẽ màn hình giao diện
+    void renderStartScreen();  // Hiển thị màn hình Start
+    void renderEndScreen();    // Hiển thị màn hình End
 };
 
-#endif
+#endif // GAME_H
