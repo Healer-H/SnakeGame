@@ -11,6 +11,13 @@ Food::Food() {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
+void Food::spawn(const sf::Vector2u& windowSize) {
+    // Sinh vị trí ngẫu nhiên cho thức ăn
+    int x = (std::rand() % windowSize.x);
+    int y = (std::rand() % windowSize.y);
+    shape.setPosition(static_cast<float>(x), static_cast<float>(y));
+}
+
 void Food::draw(sf::RenderWindow& window) const {
     window.draw(foodShape);
 }
