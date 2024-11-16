@@ -1,3 +1,6 @@
+#include "Game.h"
+#include "Snake.h"
+
 void Snake::move(const sf::Vector2u& windowSize) {
     // Move the snake's body
     for (int i = body.size() - 1; i > 0; --i) {
@@ -36,4 +39,10 @@ bool Snake::checkCollision(const sf::Vector2u& windowSize) const {
         }
     }
     return false;
+
+
+void Snake::draw(sf::RenderWindow& window) const {
+    for (const auto& segment : body) {
+        window.draw(segment);
+    }
 }

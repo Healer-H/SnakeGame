@@ -14,7 +14,7 @@ public:
 
 
 private:
-    std::deque<sf::Vector2f> body;  // Vị trí của các đoạn thân rắn
+    std::vector<sf::RectangleShape> body;  // Vị trí của các đoạn thân rắn
     sf::Vector2f direction;         // Hướng di chuyển
 };
 
