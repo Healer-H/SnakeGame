@@ -27,10 +27,10 @@ void Game::processInput() {
 
         if (gameState == GameState::Start && ui.isButtonClicked(window, ui.getPlayButton())) {
             gameState = GameState::Run;
-        } else if (gameState == GameState::End && ui.isButtonClicked(window, ui.getReplayButton())) {
             snake = Snake(ui.getSnakeHeadTexture(), ui.getSnakeBodyTexture());
             food = Food();
             score = 0;
+        } else if (gameState == GameState::End && ui.isButtonClicked(window, ui.getReplayButton())) {
             gameState = GameState::Start;
         }
 
