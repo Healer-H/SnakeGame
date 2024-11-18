@@ -6,6 +6,12 @@
 #include "Food.h"
 #include "UI.h"
 
+enum class GameState {
+    Start,
+    Run,
+    End
+};
+
 class Game {
 public:
     Game();
@@ -16,12 +22,12 @@ private:
     Snake snake;
     Food food;
     UI ui;
-
+    GameState gameState;
     int score;
 
-    void processInput();  // Xử lý đầu vào của người chơi
-    void update();        // Cập nhật trạng thái trò chơi
-    void render();        // Vẽ các thành phần lên cửa sổ
+    void processInput();
+    void update();
+    void render();
 };
 
 #endif
