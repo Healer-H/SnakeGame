@@ -32,15 +32,19 @@ void Snake::move(const sf::FloatRect& playArea) {
 
     // Wrap around within PlayArea
     sf::Vector2f headPos = body[0].getPosition();
-    if (headPos.x < playArea.left) {
-        headPos.x = playArea.left + playArea.width - 40;
-    } else if (headPos.x >= playArea.left + playArea.width) {
-        headPos.x = playArea.left;
+    int _left = (static_cast<int>(playArea.left) + 40 - 1) / 40 * 40;
+    int _top = (static_cast<int>(playArea.top) + 40 - 1) / 40 * 40;
+    int _width = static_cast<int>(playArea.width) / 40 * 40;
+    int _height = static_cast<int>(playArea.height) / 40 * 40;
+    if (headPos.x < _left) {
+        headPos.x = _left + _width - 40;
+    } else if (headPos.x >= _left + _width) {
+        headPos.x = _left;
     }
-    if (headPos.y < playArea.top) {
-        headPos.y = playArea.top + playArea.height - 40;
-    } else if (headPos.y >= playArea.top + playArea.height) {
-        headPos.y = playArea.top;
+    if (headPos.y < _top) {
+        headPos.y = _top + _height - 40;
+    } else if (headPos.y >= _top + _height) {
+        headPos.y = _top;
     }
     body[0].setPosition(headPos);
 }
