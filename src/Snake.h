@@ -12,6 +12,7 @@ public:
     sf::Vector2f getHeadPosition() const;                                           // Lấy vị trí đầu rắn
     void grow();                                                                    // Thêm một đoạn thân rắn
     bool checkCollision(const sf::FloatRect& playArea) const;                       // Kiểm tra va chạm
+    bool checkCollisionWithFood(const sf::Vector2f& foodPosition) const;            // Kiểm tra va chạm với thức ăn
     void draw(sf::RenderWindow& window) const;                                      // Vẽ rắn
 
 private:

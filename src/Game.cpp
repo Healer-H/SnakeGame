@@ -64,7 +64,12 @@ void Game::update() {
     if (snake.getHeadPosition() == food.getPosition()) {
         snake.grow();
         score += 10;
-        food.spawn(ui.getPlayArea());
+        bool isFoodOnSnake = false;
+        do {
+            food.spawn(ui.getPlayArea());
+            isFoodOnSnake = snake.checkCollisionWithFood(food.getPosition());
+        }
+        while(isFoodOnSnake);
     }
 
     if (snake.checkCollision(ui.getPlayArea())) {

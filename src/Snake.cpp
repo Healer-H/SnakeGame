@@ -82,6 +82,15 @@ bool Snake::checkCollision(const sf::FloatRect& playArea) const {
     return false;
 }
 
+bool Snake::checkCollisionWithFood(const sf::Vector2f& foodPosition) const {
+    for(size_t i = 0; i < body.size(); ++i) {
+        if (body[i].getPosition() == foodPosition) {
+            return true;
+        }
+    }
+    return false;
+}
+
 // Vẽ rắn
 void Snake::draw(sf::RenderWindow& window) const {
     for (size_t i = 0; i < body.size(); ++i) {
