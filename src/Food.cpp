@@ -1,20 +1,19 @@
 #include "Food.h"
 #include <SFML/Graphics.hpp>
 #include <cstdlib>  // For rand() and srand()
-#include <ctime>    // For time()
+#include <iostream>
 
 Food::Food() {
     // Initialize the food's shape
-    shape.setSize(sf::Vector2f(10, 10));
+    shape.setSize(sf::Vector2f(40, 40));
     shape.setFillColor(sf::Color::Red);
-    // Seed the random number generator
-    std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
 void Food::spawn(const sf::FloatRect& playArea) {
     // Generate a random position aligned with the grid within PlayArea
-    int x = static_cast<int>(playArea.left + (std::rand() % static_cast<int>(playArea.width / 10)) * 10);
-    int y = static_cast<int>(playArea.top + (std::rand() % static_cast<int>(playArea.height / 10)) * 10);
+    int x = static_cast<int>(playArea.left + (std::rand() % static_cast<int>(playArea.width / 40)) * 40);
+    int y = static_cast<int>(playArea.top + (std::rand() % static_cast<int>(playArea.height / 40)) * 40);
+    std::cout << "Food position: " << x << ", " << y << std::endl;
     shape.setPosition(static_cast<float>(x), static_cast<float>(y));
 }
 

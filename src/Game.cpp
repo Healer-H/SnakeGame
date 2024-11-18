@@ -29,11 +29,11 @@ void Game::processInput() {
             gameState = GameState::Run;
             snake = Snake(ui.getSnakeHeadTexture(), ui.getSnakeBodyTexture());
             food = Food();
+            food.spawn(ui.getPlayArea());
             score = 0;
         } else if (gameState == GameState::End && ui.isButtonClicked(window, ui.getReplayButton())) {
             gameState = GameState::Start;
         }
-
         if (gameState == GameState::Run && event.type == sf::Event::KeyPressed) {
             switch (event.key.code) {
                 case sf::Keyboard::Up: snake.setDirection({0, -1}); break;
