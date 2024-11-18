@@ -18,6 +18,11 @@ void Food::spawn(const sf::Vector2u& windowSize) {
     shape.setPosition(static_cast<float>(x), static_cast<float>(y));
 }
 
+
+sf::Vector2f Food::getPosition() const {
+    return shape.getPosition();
+}
+
 void Food::draw(sf::RenderWindow& window) const {
     window.draw(foodShape);
 }
