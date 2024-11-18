@@ -10,14 +10,14 @@ Snake::Snake(const sf::Texture& headTexture, const sf::Texture& bodyTexture)
     head.setTexture(&headTexture); 
     head.setTextureRect(sf::IntRect(0, 0, headTexture.getSize().x, headTexture.getSize().y));
     
-    head.setPosition(300, 150);                                               // Đặt vị trí đầu rắn
+    head.setPosition(280, 160);                                               // Đặt vị trí đầu rắn
     body.push_back(head);
 
     // Initialize the first segment of the body
     sf::RectangleShape segment(sf::Vector2f(40, 40));
     segment.setTexture(&bodyTexture);
     segment.setTextureRect(sf::IntRect(0, 0, bodyTexture.getSize().x, bodyTexture.getSize().y));
-    segment.setPosition(260, 150);                    // Đặt vị trí thân rắn
+    segment.setPosition(240, 160);                    // Đặt vị trí thân rắn
     body.push_back(segment);
 
     direction = sf::Vector2f(1, 0); // Initial direction: right

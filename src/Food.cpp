@@ -11,8 +11,27 @@ Food::Food() {
 
 void Food::spawn(const sf::FloatRect& playArea) {
     // Generate a random position aligned with the grid within PlayArea
-    int x = static_cast<int>(playArea.left + (std::rand() % static_cast<int>(playArea.width / 40)) * 40);
-    int y = static_cast<int>(playArea.top + (std::rand() % static_cast<int>(playArea.height / 40)) * 40);
+    int x = (rand() % static_cast<int>(playArea.width / 40)) * 40;
+    int y = (rand() % static_cast<int>(playArea.height / 40)) * 40;
+
+    int _top = (static_cast<int>(playArea.top) + 40) / 40 * 40;
+    int _left = static_cast<int>(playArea.left) / 40 * 40;
+    int _width = static_cast<int>(playArea.width) / 40 * 40;
+    int _height = static_cast<int>(playArea.height) / 40 * 40;
+
+    if (y < _top) {
+        y = _top;
+    }
+    if(y > _height) {
+        y = _height;
+    }
+    if (x < _left) {
+        x = _left;
+    }
+    if (x > _width) {
+        x = _width;
+    }
+
     std::cout << "Food position: " << x << ", " << y << std::endl;
     shape.setPosition(static_cast<float>(x), static_cast<float>(y));
 }
