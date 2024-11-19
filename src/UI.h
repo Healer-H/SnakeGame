@@ -27,6 +27,7 @@ private:
     sf::Text titleText;
     sf::Text scoreText;
     sf::Text gameOverText;
+    sf::Text creditText;
 
     sf::Texture playButtonTexture;
     sf::Sprite playButton;

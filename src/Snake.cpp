@@ -98,9 +98,9 @@ bool Snake::checkCollisionWithFood(const sf::Vector2f& foodPosition) const {
 // Vẽ rắn
 void Snake::draw(sf::RenderWindow& window) const {
     for (size_t i = 0; i < body.size(); ++i) {
-        std::cout << "Drawing segment " << i 
-                  << " at position: " << body[i].getPosition().x 
-                  << ", " << body[i].getPosition().y << std::endl;
+            std::cout << "Drawing segment " << 0 
+            << " at position: " << body[0].getPosition().x 
+            << ", " << body[0].getPosition().y << std::endl;
         window.draw(body[i]);
     }
 }

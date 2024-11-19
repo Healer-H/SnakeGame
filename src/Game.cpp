@@ -6,7 +6,7 @@
 int SPEED = 100; // Tốc độ mặc định
 
 Game::Game()
-    : window(sf::VideoMode(800, 600), "SnakeGame"),
+    : window(sf::VideoMode(800, 920), "SnakeGame"),
       score(0),
       gameState(GameState::Start),
       snake(ui.getSnakeHeadTexture(), ui.getSnakeBodyTexture()),
