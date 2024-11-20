@@ -1,28 +1,45 @@
 #include "Food.h"
 #include <SFML/Graphics.hpp>
-#include <cstdlib>  
-#include <ctime>
+#include <cstdlib>  // For rand() and srand()
+#include <iostream>
 
 Food::Food() {
-    // Khởi tạo shape food
-    shape.setSize(sf::Vector2f(10, 10));
+    // Initialize the food's shape
+    shape.setSize(sf::Vector2f(40, 40));
     shape.setFillColor(sf::Color::Red);
-    // Seed để sinh ra số ngẫu nhiên
-    std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
-void Food::spawn(const sf::Vector2u& windowSize) {
-    // Sinh vị trí ngẫu nhiên cho thức ăn
-    int x = (std::rand() % windowSize.x);
-    int y = (std::rand() % windowSize.y);
+void Food::spawn(const sf::FloatRect& playArea) {
+    // Generate a random position aligned with the grid within PlayArea
+    int x = (rand() % static_cast<int>(playArea.width / 40)) * 40;
+    int y = (rand() % static_cast<int>(playArea.height / 40)) * 40;
+
+    int _top = (static_cast<int>(playArea.top) + 40) / 40 * 40;
+    int _left = static_cast<int>(playArea.left) / 40 * 40;
+    int _width = static_cast<int>(playArea.width) / 40 * 40;
+    int _height = static_cast<int>(playArea.height) / 40 * 40;
+
+    if (y < _top) {
+        y = _top;
+    }
+    if(y > _height) {
+        y = _height;
+    }
+    if (x < _left) {
+        x = _left;
+    }
+    if (x > _width) {
+        x = _width;
+    }
+
+    std::cout << "Food position: " << x << ", " << y << std::endl;
     shape.setPosition(static_cast<float>(x), static_cast<float>(y));
 }
-
 
 sf::Vector2f Food::getPosition() const {
     return shape.getPosition();
 }
 
 void Food::draw(sf::RenderWindow& window) const {
-    window.draw(foodShape);
+    window.draw(shape);
 }
