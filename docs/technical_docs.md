@@ -112,7 +112,7 @@ function MoveSnake(windowSize) # Move the snake’s body based on direction and 
 end function
 ```
 
-• **Time Complexity**: *O(n)*, với *n* là số đoạn thân, cụ thể. Thao tác cập nhật lại thân rắn tốn độ phức tạp *O(n)* do phải duyệt qua toàn bộ vector và cập nhật. Thao tác "xuyên biên" tốn *O(1)* để kiểm tra và cập nhật vị trí head.
+• **Time Complexity**: $O(n)$, với $n$ là số đoạn thân, cụ thể. Thao tác cập nhật lại thân rắn tốn độ phức tạp $O(n)$ do phải duyệt qua toàn bộ vector và cập nhật. Thao tác "xuyên biên" tốn $O(1)$ để kiểm tra và cập nhật vị trí head.
 
 ### 2. Phát hiện va chạm (Collision Detection)
 • **Mô tả**: Thuật toán phát hiện va chạm được thiết kế để kiểm tra xem đầu rắn có chạm vào bất kỳ đoạn thân nào của chính nó hay không. Điều này giúp xác định khi nào trò chơi kết thúc. Dưới đây là mã giả mô tả chi tiết thuật toán này:
@@ -132,7 +132,7 @@ function CheckCollision # Check if the snake’s head collides with any other pa
     return FALSE  # No collision detected
 end function
 ```
-• **Time Complexity**: *O(n)*, với *n* là số đoạn thân rắn do chúng ta duyệt vào phần thân rắn để so sánh với head.
+• **Time Complexity**: $O(n)$, với $n$ là số đoạn thân rắn do chúng ta duyệt vào phần thân rắn để so sánh với head.
 
 ### 3. Sinh thức ăn ngẫu nhiên (Food Spawning)
 • **Mô tả**: Thuật toán sinh thức ăn được thiết kế để đặt thức ăn tại một vị trí ngẫu nhiên trên bản đồ. Dưới đây là mã giả mô tả chi tiết thuật toán này:
@@ -151,4 +151,4 @@ function SpawnFood(windowSize) # Generate random position for food within the wi
    shape.position = (x, y)  # Set the position of the food shape
 end function
 ```
-• **Time Complexity**: *O(1)* do chỉ tốn chi phí ở thao tác random và tính toán đơn giản.
+• **Time Complexity**: $O(1)$ do chỉ tốn chi phí ở thao tác random và tính toán đơn giản.
