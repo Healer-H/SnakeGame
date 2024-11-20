@@ -11,10 +11,10 @@ Food::Food() {
     std::srand(static_cast<unsigned>(std::time(nullptr)));
 }
 
-void Food::spawn(const sf::Vector2u& windowSize) {
-    // Sinh vị trí ngẫu nhiên cho thức ăn
-    int x = (std::rand() % windowSize.x);
-    int y = (std::rand() % windowSize.y);
+void Food::spawn(const sf::FloatRect& playArea) {
+    // Sinh vị trí ngẫu nhiên cho thức ăn, căn chỉnh theo lưới trong PlayArea
+    int x = static_cast<int>(playArea.left + (std::rand() % static_cast<int>(playArea.width / 10)) * 10);
+    int y = static_cast<int>(playArea.top + (std::rand() % static_cast<int>(playArea.height / 10)) * 10);
     shape.setPosition(static_cast<float>(x), static_cast<float>(y));
 }
 
