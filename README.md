@@ -58,32 +58,6 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 2. Cấu hình đường dẫn tới thư viện SFML trong Properties > VC++ Directories.
 3. Biên dịch và chạy dự án bằng cách nhấn `Ctrl + F5`.
 
-### Cách 2. Sử dụng Docker 
-
-Để chạy game này bằng Docker, bạn cần thực hiện các bước sau:
-
-1. **Cài đặt Docker**:
-   Nếu bạn chưa cài đặt Docker, hãy làm theo hướng dẫn tại [trang chủ của Docker](https://docs.docker.com/get-docker/).
-
-2. **Clone repository**:
-   Clone repository của game về máy của bạn:
-
-   ```sh
-   git clone https://github.com/Healer-H/SnakeGame.git
-   cd SnakeGame
-
-3. **Build Docker Image**
-
-  ```bash 
-  docker build -t snake_game .
-  ```
-
-4. **Run Docker Container**
-
-  ```bash
-  docker run -it --rm snake_game
-  ```
-
 ## Hướng dẫn chơi game
 
 (tom tat huong dan choi game o day, tom tat thui nhe)
