@@ -6,6 +6,11 @@
 #include "Food.h"
 #include "UI.h"
 
+enum class GameState {
+    Start,
+    Run,
+    End
+};
 class Game {
 public:
     Game();
@@ -18,6 +23,7 @@ private:
     UI ui;
 
     int score;
+    GameState gameState;
 
     void processInput();  // Xử lý đầu vào của người chơi
     void update();        // Cập nhật trạng thái trò chơi
