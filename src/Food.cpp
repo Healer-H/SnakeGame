@@ -24,5 +24,5 @@ sf::Vector2f Food::getPosition() const {
 }
 
 void Food::draw(sf::RenderWindow& window) const {
-    window.draw(foodShape);
+    window.draw(shape);
 }
