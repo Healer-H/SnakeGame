@@ -5,12 +5,12 @@
 
 class UI {
 public:
-    UI();                                                                               // Constructor
-    void displayStartScreen(sf::RenderWindow& window);                                  // Hiển thị màn hình Start
-    void displayGameScreen(sf::RenderWindow& window, int score);                        // Hiển thị màn chơi
-    void displayEndScreen(sf::RenderWindow& window);                                    // Hiển thị màn hình End
+    UI(); // Constructor
+    void displayStartScreen(sf::RenderWindow& window);                                    // Hiển thị màn hình Start
+    void displayGameScreen(sf::RenderWindow& window, int score);                          // Hiển thị màn chơi
+    void displayEndScreen(sf::RenderWindow& window);                                      // Hiển thị màn hình End
 
-    bool isButtonClicked(const sf::RenderWindow& window, const sf::Sprite& button);     // Kiểm tra nút được nhấn
+    bool isButtonClicked(const sf::RenderWindow& window, const sf::Sprite& button);       // Kiểm tra nút được nhấn
 
     // Getter functions
     sf::Sprite& getPlayButton();
@@ -18,7 +18,7 @@ public:
     sf::FloatRect getPlayArea() const;
 
     // New getter for textures
-    const sf::Sprite& getBackgroundSprite() const;                                      // Getter cho background
+    const sf::Sprite& getBackgroundSprite() const; // Getter cho background
     const sf::Texture& getSnakeHeadTexture() const;
     const sf::Texture& getSnakeBodyTexture() const;
 
@@ -27,6 +27,7 @@ private:
     sf::Text titleText;
     sf::Text scoreText;
     sf::Text gameOverText;
+    sf::Text creditText;
 
     sf::Texture playButtonTexture;
     sf::Sprite playButton;
