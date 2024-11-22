@@ -1,47 +1,24 @@
-#ifndef UI_H
-#define UI_H
+#ifndef SNAKE_H
+#define SNAKE_H
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 
-class UI {
+class Snake {
 public:
-    UI(); // Constructor
-    void displayStartScreen(sf::RenderWindow& window);   // Hiển thị màn hình Start
-    void displayGameScreen(sf::RenderWindow& window, int score); // Hiển thị màn chơi
-    void displayEndScreen(sf::RenderWindow& window);     // Hiển thị màn hình End
-
-    bool isButtonClicked(const sf::RenderWindow& window, const sf::Sprite& button); // Kiểm tra nút được nhấn
-
-    // Getter functions
-    sf::Sprite& getPlayButton();
-    sf::Sprite& getReplayButton();
-    sf::FloatRect getPlayArea() const;
-
-    // New getter for textures
-    const sf::Sprite& getBackgroundSprite() const; // Getter cho background
-    const sf::Texture& getSnakeHeadTexture() const;
-    const sf::Texture& getSnakeBodyTexture() const;
+    Snake(const sf::Texture& headTexture, const sf::Texture& bodyTexture);          // Constructor  
+    void move(const sf::FloatRect& playArea);                                       // Di chuyển rắn trong PlayArea 
+    void setDirection(const sf::Vector2f& newDirection);                            // Đặt hướng di chuyển
+    sf::Vector2f getHeadPosition() const;                                           // Lấy vị trí đầu rắn
+    void grow();                                                                    // Tăng chiều dài rắn khi ăn thức ăn
+    bool checkCollision(const sf::FloatRect& playArea) const;                       // Kiểm tra va chạm
+    bool checkCollisionWithFood(const sf::Vector2f& foodPosition) const;            // Kiểm tra va chạm với thức ăn
+    void draw(sf::RenderWindow& window) const;                                            // Vẽ rắn lên cửa sổ
 
 private:
-    sf::Font font;
-    sf::Text titleText;
-    sf::Text scoreText;
-    sf::Text gameOverText;
-    sf::Text creditText;
-
-    sf::Texture playButtonTexture;
-    sf::Sprite playButton;
-
-    sf::Texture replayButtonTexture;
-    sf::Sprite replayButton;
-
-    sf::Texture backgroundTexture; // Texture cho background
-    sf::Sprite backgroundSprite;   // Sprite cho background
-
-    sf::Texture snakeHeadTexture;  // Texture cho đầu rắn
-    sf::Texture snakeBodyTexture;  // Texture cho thân rắn
-
-    sf::FloatRect playArea;        // Vùng PlayArea
+    std::vector<sf::RectangleShape> body;                                           // Các đoạn của rắn
+    sf::Vector2f direction;                                                         // Hướng di chuyển của rắn
+    const sf::Texture* bodyTexture;                                                 // Texture cho thân rắn
 };
 
-#endif
+#endif // SNAKE_H
