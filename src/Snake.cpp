@@ -101,9 +101,7 @@ bool Snake::checkCollisionWithFood(const sf::Vector2f& foodPosition) const {
 // Sửa lại hàm test + vẽ rắn đã load texture
 void Snake::draw(sf::RenderWindow& window) const {
     for (size_t i = 0; i < body.size(); ++i) {
-        std::cout << "Drawing segment " << i 
-                  << " at position: " << body[i].getPosition().x 
-                  << ", " << body[i].getPosition().y << std::endl;
         window.draw(body[i]);
     }
+    std::cout << "Head position: " << body[0].getPosition().x << ", " << body[0].getPosition().y << std::endl;
 }

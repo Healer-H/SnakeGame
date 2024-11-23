@@ -9,7 +9,7 @@ UI::UI() {
     }
 
     // Load background
-    if (!backgroundTexture.loadFromFile("assets/images/background-w.png")) {
+    if (!backgroundTexture.loadFromFile("assets/images/background-slogan.png")) {
         std::cerr << "Failed to load background texture!" << std::endl;
     }
     backgroundSprite.setTexture(backgroundTexture);
