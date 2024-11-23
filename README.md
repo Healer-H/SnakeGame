@@ -80,6 +80,9 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 - Tận dụng khả năng xuyên qua cạnh đi ra từ phía đối diện để tối ưu hóa đường đi.
 - Tránh khu vực hẹp để không bị chặn đường di chuyển.
 - Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn (Tính năng đang phát triển).
+
+### Hướng dẫn cách chơi game chi tiết tại [đây](https://github.com/Healer-H/SnakeGame/blob/master/docs/user_guide.md)
+
 ## Kỹ thuật sử dụng trong game
 
 (tom tat ky thuat su dung trong game tai day)
