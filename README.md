@@ -108,6 +108,7 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 - Tránh khu vực hẹp để không bị chặn đường di chuyển.
 - Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn (Tính năng đang phát triển).
 
+### Hướng dẫn cách chơi game đầy đủ tại [đây](https://github.com/Healer-H/SnakeGame/blob/master/docs/user_guide.md)
 <!-- (tom tat huong dan choi game o day, tom tat thui nhe) -->
 
 ## Kỹ thuật sử dụng trong game
