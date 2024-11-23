@@ -6,9 +6,9 @@
 
 ## Demo
 
-*Dưới đây là một hình ảnh hoặc GIF mô tả trò chơi (chụp màn hình trò chơi khi rắn di chuyển, ăn thức ăn và hiển thị điểm số).*
+*Dưới đây là video mô tả trò chơi, bao gồm cách rắn di chuyển, ăn thức ăn, và hiển thị điểm số.*
 
-(update demo video cho nay nhaa)
+[📹 Xem video demo](assets/video/demo.mp4)
 
 ## Cách chạy game
 
