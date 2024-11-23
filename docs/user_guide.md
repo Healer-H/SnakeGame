@@ -95,4 +95,4 @@ Người chơi có thể dễ dàng điều khiển rắn di chuyển qua các h
 ## Mẹo chơi để ghi điểm cao
 - **Tận dụng cạnh màn hình:** Tận dụng khả năng xuyên qua cạnh đi ra từ phía đối diện để tối ưu hóa đường đi, nhanh chóng tiếp cận thức ăn.
 - **Quản lý không gian:** Duy trì khoảng cách giữa thân rắn và các khu vực di chuyển hẹp.
-- **Chiến lược chuỗi ăn liên tục:** Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn. *(Tính năng đang phát triển).*
+- **Chiến lược chuỗi ăn liên tục:** Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn *(Tính năng đang phát triển).*
