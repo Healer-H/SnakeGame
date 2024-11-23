@@ -8,7 +8,12 @@
 
 _Dưới đây là một hình ảnh hoặc GIF mô tả trò chơi (chụp màn hình trò chơi khi rắn di chuyển, ăn thức ăn và hiển thị điểm số)._
 
-[📹 Xem video demo](assets/video/demo.mp4)
+<video controls width="800" height="920">
+  <source src="assets/video/demo.mp4" type="video/mp4">
+  Trình duyệt của bạn không hỗ trợ video.
+</video>
+
+
 
 ## Cách chạy game
 
