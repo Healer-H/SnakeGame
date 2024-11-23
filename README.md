@@ -83,7 +83,6 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 - Tận dụng khả năng xuyên qua cạnh đi ra từ phía đối diện để tối ưu hóa đường đi.
 - Tránh khu vực hẹp để không bị chặn đường di chuyển.
 - Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn (Tính năng đang phát triển).
-(tom tat huong dan choi game o day, tom tat thui nhe)
 
 ## Kỹ thuật sử dụng trong game
 
