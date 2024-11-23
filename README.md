@@ -31,6 +31,8 @@
 - **Windows**:
   - Tải SFML từ [https://www.sfml-dev.org/download.php](https://www.sfml-dev.org/download.php) và làm theo hướng dẫn cài đặt cho Windows.
   - Thêm thư mục `SFML\bin` vào biến môi trường PATH để có thể sử dụng SFML trong dòng lệnh.
+  - **Lưu ý:** Trước khi tải SFML, hãy kiểm tra version `g++` (MinGW) trên máy bạn bằng lệnh `g++ --version` và chọn phiên bản SFML tương ứng từ trang tải xuống.
+
 
 #### 2. Clone source code
 
