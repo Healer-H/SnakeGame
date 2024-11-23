@@ -59,9 +59,27 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 3. Biên dịch và chạy dự án bằng cách nhấn `Ctrl + F5`.
 
 ## Hướng dẫn chơi game
+### Mục tiêu trò chơi
 
-(tom tat huong dan choi game o day, tom tat thui nhe)
+- Điều khiển rắn để ăn thức ăn, tăng điểm và chiều dài.
+- Tránh để đầu rắn va vào thân.
+### Cách điều khiển
 
+- ⬆️: Di chuyển lên
+- ⬇️: Di chuyển xuống
+- ⬅️: Di chuyển sang trái
+- ➡️: Di chuyển sang phải
+
+### Quy tắc trò chơi
+
+- Rắn sẽ dài hơn sau mỗi lần ăn thức ăn.
+- Trò chơi kết thúc nếu đầu rắn chạm vào thân của chính nó.
+
+### Mẹo chơi
+
+- Tận dụng khả năng xuyên qua cạnh đi ra từ phía đối diện để tối ưu hóa đường đi.
+- Tránh khu vực hẹp để không bị chặn đường di chuyển.
+- Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn (Tính năng đang phát triển).
 ## Kỹ thuật sử dụng trong game
 
 (tom tat ky thuat su dung trong game tai day)
