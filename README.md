@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Snake Game là một trò chơi đơn giản được viết bằng ngôn ngữ lập trình C++ sử dụng thư viện SFML cho giao diện đồ họa. Mục tiêu của dự án là xây dựng một phiên bản đơn giản của trò chơi rắn săn mồi nổi tiếng, với các tính năng cơ bản như di chuyển rắn, ăn thức ăn để tăng điểm và chiều dài. 
+**Snake Game** là một trò chơi kinh điển được phát triển bằng ngôn ngữ lập trình C++ với việc sử dụng thư viện đồ họa **SFML** để xây dựng giao diện người dùng trực quan. Dự án được thiết kế nhằm tái hiện lại trò chơi rắn săn mồi nổi tiếng với những tính năng cơ bản như: di chuyển rắn, sinh thức ăn ngẫu nhiên, tăng điểm và chiều dài khi ăn thức ăn, đồng thời kiểm tra va chạm để kết thúc trò chơi. Trò chơi được xây dựng dựa trên các nguyên tắc lập trình hướng đối tượng, tận dụng cấu trúc code rõ ràng và các công cụ quản lý phiên bản như GitHub để đảm bảo tính ổn định và dễ mở rộng.
 
 ## Demo
 
@@ -12,7 +12,7 @@ Snake Game là một trò chơi đơn giản được viết bằng ngôn ngữ 
 
 ## Cách chạy game
 
-### Cách 1: Cài đặt các dependences và thực thi 
+### Cài đặt các dependences và thực thi 
 
 #### 1. Cài đặt thư viện SFML
 
