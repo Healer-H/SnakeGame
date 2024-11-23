@@ -65,10 +65,10 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 - Tránh để đầu rắn va vào thân.
 ### Cách điều khiển
 
-- ⬆️: Di chuyển lên
-- ⬇️: Di chuyển xuống
-- ⬅️: Di chuyển sang trái
-- ➡️: Di chuyển sang phải
+- ⬆️ Di chuyển rắn lên phía trên.
+- ⬇️ Di chuyển rắn xuống phía dưới.
+- ⬅️ Di chuyển rắn sang bên trái.
+- ➡️ Di chuyển rắn sang bên phải.
 
 ### Quy tắc trò chơi
 
