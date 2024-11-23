@@ -6,24 +6,26 @@
 
 ## Demo
 
-*Dưới đây là một hình ảnh hoặc GIF mô tả trò chơi (chụp màn hình trò chơi khi rắn di chuyển, ăn thức ăn và hiển thị điểm số).*
+_Dưới đây là một hình ảnh hoặc GIF mô tả trò chơi (chụp màn hình trò chơi khi rắn di chuyển, ăn thức ăn và hiển thị điểm số)._
 
 (update demo video cho nay nhaa)
 
 ## Cách chạy game
 
-### Cài đặt các dependences và thực thi 
+### Cài đặt các dependences và thực thi
 
 #### 1. Cài đặt thư viện SFML
 
 Để chạy dự án này, bạn cần cài đặt **SFML**. Thực hiện các bước sau tùy theo hệ điều hành của bạn:
 
 - **Linux (Ubuntu)**:
+
   ```bash
   sudo apt-get install libsfml-dev
   ```
 
 - **macOS** (sử dụng Homebrew):
+
   ```bash
   brew install sfml
   ```
@@ -33,12 +35,11 @@
   - Thêm thư mục `SFML\bin` vào biến môi trường PATH để có thể sử dụng SFML trong dòng lệnh.
   - **Lưu ý:** Trước khi tải SFML, hãy kiểm tra version `g++` (MinGW) trên máy bạn bằng lệnh `g++ --version` và chọn phiên bản SFML tương ứng từ trang tải xuống.
 
-
 #### 2. Clone source code
 
 ```bash
 git clone https://github.com/Healer-H/SnakeGame.git
-cd SnakeGame 
+cd SnakeGame
 ```
 
 #### 3. Biên dịch và chạy trò chơi
@@ -46,6 +47,7 @@ cd SnakeGame
 Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò chơi theo một trong các cách sau:
 
 ##### Sử dụng Makefile (Linux/macOS)
+
 1. Trong thư mục SnakeGame, chạy lệnh:
    ```bash
    make
@@ -56,6 +58,7 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
    ```
 
 ##### Sử dụng Visual Studio (Windows)
+
 1. Mở dự án trong Visual Studio.
 2. Cấu hình đường dẫn tới thư viện SFML trong Properties > VC++ Directories.
 3. Biên dịch và chạy dự án bằng cách nhấn `Ctrl + F5`.
@@ -66,6 +69,7 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 
 - Điều khiển rắn để ăn thức ăn, tăng điểm và chiều dài.
 - Tránh để đầu rắn va vào thân.
+
 ### Cách điều khiển
 
 - ⬆️: Di chuyển lên
@@ -88,9 +92,23 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 
 ## Kỹ thuật sử dụng trong game
 
-(tom tat ky thuat su dung trong game tai day)
+Trò chơi **SnakeGame** được tổ chức theo cấu trúc thư mục rõ ràng, gồm:
 
-Dưới đây là phần bổ sung giải thích cấu trúc thư mục cho tệp README của bạn:
+- **Mã nguồn chính (src)**: Các lớp chính gồm:
+  - `Game`: Quản lý vòng lặp chính.
+  - `Snake`: Kiểm soát hành vi của rắn.
+  - `Food`: Sinh thức ăn ngẫu nhiên.
+  - `UI`: Hiển thị giao diện người dùng.
+- **Tài nguyên (assets)**: Lưu trữ hình ảnh, âm thanh hỗ trợ hiển thị.
+- **Tài liệu hướng dẫn (docs)**: Được sắp xếp để người phát triển dễ tham khảo.
+
+Các chức năng chính bao gồm:
+
+- Điều khiển rắn bằng phím mũi tên.
+- Phát hiện va chạm với thân, biên vùng chơi, hoặc thức ăn.
+- Sinh thức ăn ngẫu nhiên theo lưới (grid) để đảm bảo vị trí hợp lệ.
+
+Dữ liệu được quản lý qua các cấu trúc như `std::vector` cho quản lý thân rắn, `sf::RectangleShape` cho biểu diễn thức ăn, và `sf::Vector2f` để xác định hướng di chuyển. Ngoài ra, **Makefile** hỗ trợ biên dịch, giúp quá trình phát triển và bảo trì đơn giản. Thuật toán được tối ưu hóa để đảm bảo hiệu suất cao và trải nghiệm mượt mà cho người chơi.
 
 ---
 
