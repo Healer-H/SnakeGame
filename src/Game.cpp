@@ -1,23 +1,26 @@
 #include "Game.h"
 #include <iostream>
-#include <thread>  // Include the thread library for sleep_for
-#include <chrono>  // Include the chrono library for milliseconds
+#include <thread>
+#include <chrono>
+
+int SPEED = 100; // Tốc độ mặc định
 
 Game::Game()
     : window(sf::VideoMode(800, 920), "SnakeGame"),
       score(0),
       gameState(GameState::Start),
-      snake(ui.getSnakeHeadTexture(), ui.getSnakeBodyTexture()) {}
+      snake(ui.getSnakeHeadTexture(), ui.getSnakeBodyTexture()),
+      canAcceptInput(true),
+      inputDelay(SPEED), // Thời gian chờ 200ms giữa các lần nhập input
+      lastInputTime(std::chrono::steady_clock::now()) {}
 
 void Game::run() {
-    std::cout << "Game started" << std::endl;
     while (window.isOpen()) {
         processInput();
         update();
         render();
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));  // Sleep for 500 milliseconds
+        std::this_thread::sleep_for(std::chrono::milliseconds(SPEED));
     }
-    std::cout << "Game ended" << std::endl;
 }
 
 void Game::processInput() {
@@ -37,7 +40,10 @@ void Game::processInput() {
             gameState = GameState::Start;
         }
 
-        if (gameState == GameState::Run && event.type == sf::Event::KeyPressed) {
+        auto now = std::chrono::steady_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - lastInputTime);
+
+        if (gameState == GameState::Run && event.type == sf::Event::KeyPressed && elapsed >= inputDelay) {
             switch (event.key.code) {
                 case sf::Keyboard::Up: snake.setDirection({0, -1}); break;
                 case sf::Keyboard::Down: snake.setDirection({0, 1}); break;
@@ -45,10 +51,10 @@ void Game::processInput() {
                 case sf::Keyboard::Right: snake.setDirection({1, 0}); break;
                 default: break;
             }
+            lastInputTime = now; // Cập nhật thời gian nhập input cuối cùng
         }
     }
 }
-
 
 void Game::update() {
     if (gameState != GameState::Run) return;
@@ -70,7 +76,6 @@ void Game::update() {
         gameState = GameState::End;
     }
 }
-
 
 void Game::render() {
     if (gameState == GameState::Start) {
