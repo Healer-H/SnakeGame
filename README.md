@@ -6,9 +6,7 @@ Snake Game là một trò chơi đơn giản được viết bằng ngôn ngữ 
 
 ## Demo
 
-*Dưới đây là một hình ảnh hoặc GIF mô tả trò chơi (chụp màn hình trò chơi khi rắn di chuyển, ăn thức ăn và hiển thị điểm số).*
-
-(update demo video cho nay nhaa)
+https://github.com/user-attachments/assets/7b27b798-902e-4a7b-9c14-66d345440c8f
 
 ## Cách chạy game
 
@@ -82,12 +80,6 @@ Nếu bạn đã cài đặt SFML, bạn có thể biên dịch và chạy trò 
 - Ăn liên tục 5 thức ăn để tạo ra bigger-food, giúp ghi nhiều điểm hơn (Tính năng đang phát triển).
 
 ### Hướng dẫn cách chơi game chi tiết tại [đây](https://github.com/Healer-H/SnakeGame/blob/master/docs/user_guide.md)
-
-## Kỹ thuật sử dụng trong game
-
-(tom tat ky thuat su dung trong game tai day)
-
-Dưới đây là phần bổ sung giải thích cấu trúc thư mục cho tệp README của bạn:
 
 ---
 
